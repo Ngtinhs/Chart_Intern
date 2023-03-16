@@ -61,7 +61,7 @@ function App() {
         </Wrapper>
       </Container >
 
-      <BarChart />
+      {/* <BarChart /> */}
     </div>
   );
 }
