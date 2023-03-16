@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import { useState } from 'react';
+import { useEffect } from 'react';
 const Wrapper = styled.div`
   box-sizing: border-box;
   background: #6ECEB2;
@@ -75,7 +77,45 @@ height: 194px ;
     background-color: #FFFFFF;
   }
 `;
+
+
 function Table2() {
+
+  const [data, setData] = useState([
+    {
+      fundName: 'Quỹ Tương trưởng',
+      startDate: '22',
+      endDate: '40',
+      performance: '30',
+    },
+    {
+      fundName: 'Quỹ Cân bằng',
+      startDate: '78',
+      endDate: '37',
+      performance: '10',
+    },
+    {
+      fundName: 'Quỹ Bảo toàn',
+      startDate: '85',
+      endDate: '36',
+      performance: '2',
+    },
+  ]);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      const newData = data.map(item => ({
+        ...item,
+        startDate: Math.floor(Math.random() * 100),
+        endDate: Math.floor(Math.random() * 100),
+        performance: Math.floor(Math.floor(Math.random() * 200) - 100),
+      }));
+      setData(newData);
+    }, 5000);
+
+    return () => clearTimeout(timeoutId);
+  }, [data]);
+
   return (
     <>
       <Wrapper>
@@ -90,24 +130,14 @@ function Table2() {
               </TableRow>
             </thead>
             <TableBody>
-              <TableRow>
-                <TableCell>Quỹ Tương trưởng</TableCell>
-                <TableCell>335.00</TableCell>
-                <TableCell>40.00</TableCell>
-                <TableCell>+30%</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Quỹ Cân bằng</TableCell>
-                <TableCell>120.00</TableCell>
-                <TableCell>230.88</TableCell>
-                <TableCell>+10%</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Quỹ Bảo toàn</TableCell>
-                <TableCell>110.23</TableCell>
-                <TableCell>120.00</TableCell>
-                <TableCell>+2%</TableCell>
-              </TableRow>
+              {data.map((row) => (
+                <TableRow key={row.fundName}>
+                  <TableCell>{row.fundName}</TableCell>
+                  <TableCell>{row.startDate}</TableCell>
+                  <TableCell>{row.endDate}</TableCell>
+                  <TableCell>{row.performance > 0 ? '+' + row.performance : row.performance}</TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
 
