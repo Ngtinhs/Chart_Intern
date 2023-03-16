@@ -3,6 +3,7 @@ import SearchBox from './components/Chart/SearchBox';
 import Table2 from './components/Table/Table';
 import LineChart from './components/Chart/Chart';
 import ChangOfValue from './components/Chart/ChangOfValue';
+import BarChart from './components/Chart/BarChart';
 
 const Container = styled.div`
 max-width: 1208px;
@@ -59,6 +60,8 @@ function App() {
           <ChangOfValue />
         </Wrapper>
       </Container >
+
+      <BarChart />
     </div>
   );
 }
