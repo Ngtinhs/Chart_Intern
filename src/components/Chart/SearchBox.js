@@ -1,168 +1,106 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
-const Search = styled.div`
-/* Rectangle 351 */
-position: absolute;
-width: 1128px;
-height: 68px;
-left: 40px;
-top: 40px;
+import arrow_down from '../../assets/svg/arrow_down.svg';
+import date from '../../assets/svg/date.svg';
+import dev from '../../assets/svg/dev.svg';
+import filter from '../../assets/svg/filter.svg';
 
-background: #FFFFFF;
-border-radius: 4px;
+const SearchBoxHeader = styled.div`
+display: flex; 
+justify-content: space-between;
+margin: 40px 40px 0 40px;
+background: #ffffff; 
+border-radius: 4px; 
+align-items: center;`
 
-`
+const BoxLeft = styled.div`
+display: flex;
+gap: 24px;
 
-const ListSearchBox = styled.div`
-/* Rectangle 91 */
-
-
-box-sizing: border-box;
-
-position: absolute;
+#dropdown {
+display: flex;
 width: 236px;
-height: 44px;
-left: 24px;
-top: 12px;
-
-background: #FFFFFF;
-/* Grey */
-
-border: 1px solid #DBDFE1;
-border-radius: 4px;
-
-`
-const SearchDayBox = styled.div`
-/* Rectangle 91 */
-
-
+background: #ffffff;
+margin: 12px 0 12px 24px;
+max-height: 44px;
 box-sizing: border-box;
-
-position: absolute;
-width: 275px;
-height: 44px;
-left: 284px;
-top: 12px;
-
-background: #FFFFFF;
-/* Grey */
-
-border: 1px solid #DBDFE1;
+border: 1px solid #dbdfe1;
 border-radius: 4px;
+justify-content: space-between;
+}
 
-`
-
-
-const Title = styled.span`
-
-position: absolute;
-width: 107px;
-height: 24px;
-left: 20px;
-top: 10px;
-
+p {
 font-family: 'FWD Circular Viet TT';
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 24px;
-/* identical to box height, or 150% */
-
 display: flex;
 align-items: center;
+color: #e87722;
+margin-left: 20px;
+}
 
-/* Orange */
+img {
+margin-right: 20px;
+}
 
-color: #E87722;
-`
-const Title2 = styled.span`
-
-position: absolute;
-width: 201px;
-height: 24px;
-left: 20px;
-top: 10px;
-
-font-family: 'FWD Circular Viet TT';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
-
+#fund_date_dropdown {
 display: flex;
-align-items: center;
+justify-content: space-between;
+width: 274px;
+margin: 12px 0;
+border: 1px solid #dbdfe1;
+border-radius: 4px;
+max-height: 44px;
+box-sizing: border-box;
+}
 
-/* Orange */
-
-color: #E87722;
-`
-
-const ButtonSearch = styled.span`
-
-position: absolute;
+button {
 width: 139px;
-height: 44px;
-left: 583px;
-top: 12px;
-background: #E87722;
+margin: 12px 0;
+max-height: 44px;
+border: none;
+background: #e87722;
 border-radius: 4px;
-`
-const Title3 = styled.span`
-
-position: absolute;
-width: 69px;
-height: 24px;
-left: 35px;
-top: 10px;
-
+color: white;
 font-family: 'FWD Circular Viet TT';
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
-line-height: 24px;
-/* identical to box height, or 171% */
-
-display: flex;
 align-items: center;
 text-align: center;
 letter-spacing: 0.1em;
 text-transform: uppercase;
+}
+`;
 
-color: #FFFFFF;
-`
-
+const BoxRight = styled.div`
+display: flex; 
+gap: 24px; 
+margin-right: 20px;`
 
 const SearchBox = () => {
     return (
-        <div>
-            <Search>
-                <ListSearchBox>
-                    <Title>
-                        <span>
-                            Tất cả các quỹ
-                        </span>
-                    </Title>
-                    <iconList>
-                    </iconList>
-                </ListSearchBox>
+        <SearchBoxHeader>
+            <BoxLeft>
+                <span id="dropdown">
+                    <p>Tất cả các quỹ</p>
+                    <img src={arrow_down} alt="abc" />
+                </span>
+                <span id="fund_date_dropdown">
+                    <p>01/07/2020 - 10/08/2020</p>
+                    <img src={date} alt="abc" />
+                </span>
+                <button>TRA CỨU</button>
+            </BoxLeft>
+            <BoxRight>
+                <img src={dev} alt="none" />
+                <img src={filter} alt="none" />
+            </BoxRight>
+        </SearchBoxHeader>
+    );
+};
 
-                <SearchDayBox>
-                    <Title2>
-                        01/07/2020 - 10/08/2020
-                    </Title2>
-                    <iconList>
-                    </iconList>
-                </SearchDayBox>
-                <ButtonSearch>
-                    <Title3>
-                        Tra cứu
-                    </Title3>
-                </ButtonSearch>
-            </Search>
-        </div>
-    )
-}
-
-export default SearchBox
+export default SearchBox;

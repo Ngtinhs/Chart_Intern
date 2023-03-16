@@ -1,14 +1,10 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-
 const Wrapper = styled.div`
   box-sizing: border-box;
-  position: absolute;
-  width: 1128px;
-  left: 40px;
-  top: 651px;
   background: #6ECEB2;
 border-radius: 4px 4px 0px 0px;
+margin: 0 40px;
   
 `;
 
