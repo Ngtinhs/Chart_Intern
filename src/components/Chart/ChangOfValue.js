@@ -63,7 +63,7 @@ line-height: 38px;
 .header, .content {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  text-align: justify;
   margin-left: 30px;
 }
 `
@@ -84,8 +84,8 @@ const ChangOfValue = () => {
             <div className='filter'>
               <p>
                 6 Tháng qua
-                <img src={arrow_down} alt="abc" />
               </p>
+              <img src={arrow_down} alt="abc" />
             </div>
           </div>
           <div className='content'>
