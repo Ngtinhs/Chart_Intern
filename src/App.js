@@ -10,7 +10,7 @@ max-width: 1208px;
 margin: 116px auto;
 `
 const Title = styled.div`
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-weight: 500;
 font-size: 32px;
 line-height: 50px;
@@ -21,7 +21,7 @@ color: #E87722;
 `
 const Desc = styled.div`
 width: 100%;
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;

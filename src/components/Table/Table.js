@@ -18,7 +18,7 @@ text-align: center;
 height: 52px;
 width: 282px;
 border-right: rgba(255, 255, 255, 0.28) solid 1px;
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
@@ -29,7 +29,7 @@ border-right: none;
 const TableCell = styled.td`
 border: 1px solid #ddd;
 padding: 8px;
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-style: normal;
 font-weight: 500;
 font-size: 20px;

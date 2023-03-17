@@ -14,7 +14,7 @@ const HeaderWrapper = styled.p`
 background: #6ECEB2;
 text-align: center;
 color: #FFFFFF;
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
@@ -28,7 +28,7 @@ border-radius: 0px 0px 0px 4px;
 box-sizing: border-box;
 display: flex;
 color: #0A3B32;
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 `
 const Left = styled.div`
 flex: 1;
@@ -60,7 +60,7 @@ gap: 44.5px;
 cursor: pointer;
 }
 p {
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-style: normal;
 font-weight: 500;
 font-size: 16px;

@@ -33,7 +33,7 @@ cursor: pointer;
 }
 
 p {
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -69,7 +69,7 @@ border: none;
 background: #e87722;
 border-radius: 4px;
 color: white;
-font-family: 'FWD Circular Viet TT';
+font-family: 'Be Vietnam Pro';
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
