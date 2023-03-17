@@ -9,8 +9,6 @@ border-radius: 4px;
 margin: 0 40px;
 `
 
-
-
 const labels = ["01/07", "11/07", "21/07", "31/07", "10/08"];
 
 
@@ -44,6 +42,8 @@ export const defaultdata = {
     ],
 };
 
+
+
 const LineChart = () => {
     const [data, setData] = useState(defaultdata);
     useEffect(() => {
@@ -61,12 +61,24 @@ const LineChart = () => {
         return () => clearInterval(interval);
     }, [data])
 
+    const options = {
+        hover: {
+            intersect: true,
+            onHover: (chart) => {
+                if (chart.length > 0) {
+                    chart[0].chart.canvas.style.cursor = 'pointer';
+                }
+            },
+        },
+    };
+
     return (
         <ChartBox>
-            <Line data={data} />
+            <Line data={data}
+                options={options}
+            />
         </ChartBox>
-    )
-        ;
+    );
 };
 
 export default LineChart;

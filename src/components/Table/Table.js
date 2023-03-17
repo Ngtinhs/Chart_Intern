@@ -3,40 +3,33 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { useState } from 'react';
 import { useEffect } from 'react';
 const Wrapper = styled.div`
-  box-sizing: border-box;
-  background: #6ECEB2;
+box-sizing: border-box;
+background: #6ECEB2;
 border-radius: 4px 4px 0px 0px;
 margin: 0 40px;
-  
 `;
-
 const Table = styled.table`
-  border-collapse: collapse;
-  width: 100%;
-  `;
-
+border-collapse: collapse;
+width: 100%;
+`;
 const TableHeader = styled.th`
-  color: #FFFFFF;
-  text-align: center;
-  height: 52px;
-  width: 282px;
-  border-right: rgba(255, 255, 255, 0.28) solid 1px;
-
-  font-family: 'FWD Circular Viet TT';
+color: #FFFFFF;
+text-align: center;
+height: 52px;
+width: 282px;
+border-right: rgba(255, 255, 255, 0.28) solid 1px;
+font-family: 'FWD Circular Viet TT';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
-
-  &:last-child{
-      border-right: none;
-    }
-
+&:last-child{
+border-right: none;
+}
 `;
-
 const TableCell = styled.td`
-  border: 1px solid #ddd;
-  padding: 8px;
-  font-family: 'FWD Circular Viet TT';
+border: 1px solid #ddd;
+padding: 8px;
+font-family: 'FWD Circular Viet TT';
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
@@ -45,42 +38,28 @@ align-items: center;
 text-align: center;
 border-bottom: #6ECEB2 1px solid;
 border-right:#6ECEB2 1px solid ;
-/* identical to box height, or 120% */
-/* Orange */
-
 color: #E87722;
-
-
-  &:first-child {
-    /* Đổi màu cho td đầu tiên */
-    background: #0A3B32;
-  }
-  
-  &:last-child {
-    border-right: none;
-  }
+&:first-child {
+background: #0A3B32;
+}
+&:last-child {
+border-right: none;
+}
 `;
-
 const TableRow = styled.tr`
-  &:nth-child(even) {
-    background-color: #FFFFFF;
-  }
+&:nth-child(even) {
+background-color: #FFFFFF;
+}
 `;
-
 const TableBody = styled.tbody`
 height: 194px ;
-  tr:nth-child(even) {
-    /* background-color: #FFFFFF; */
-  }
-
-  tr:nth-child(odd) {
-    background-color: #FFFFFF;
-  }
+tr:nth-child(even) {
+}
+tr:nth-child(odd) {
+background-color: #FFFFFF;
+}
 `;
-
-
 function Table2() {
-
   const [data, setData] = useState([
     {
       fundName: 'Quỹ Tương trưởng',
@@ -101,7 +80,6 @@ function Table2() {
       performance: '2',
     },
   ]);
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const newData = data.map(item => ({
@@ -112,10 +90,8 @@ function Table2() {
       }));
       setData(newData);
     }, 5000);
-
     return () => clearTimeout(timeoutId);
   }, [data]);
-
   return (
     <>
       <Wrapper>
@@ -140,11 +116,9 @@ function Table2() {
               ))}
             </TableBody>
           </Table>
-
         </div>
       </Wrapper>
     </>
   )
 }
-
 export default Table2

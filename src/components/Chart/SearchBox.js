@@ -28,6 +28,8 @@ box-sizing: border-box;
 border: 1px solid #dbdfe1;
 border-radius: 4px;
 justify-content: space-between;
+cursor: pointer;
+
 }
 
 p {
@@ -44,6 +46,7 @@ margin-left: 20px;
 
 img {
 margin-right: 20px;
+
 }
 
 #fund_date_dropdown {
@@ -55,6 +58,7 @@ border: 1px solid #dbdfe1;
 border-radius: 4px;
 max-height: 44px;
 box-sizing: border-box;
+cursor: pointer;
 }
 
 button {
@@ -73,13 +77,20 @@ align-items: center;
 text-align: center;
 letter-spacing: 0.1em;
 text-transform: uppercase;
+cursor: pointer;
+
+
+&:hover {
+    background-color: #e87722;
+    opacity: 0.8;
 }
-`;
+}`;
 
 const BoxRight = styled.div`
 display: flex; 
 gap: 24px; 
-margin-right: 20px;`
+margin-right: 20px;
+`
 
 const SearchBox = () => {
     return (

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 
-
 const Wrapper = styled.div`
 margin: 0 40px 40px 40px;
 background: #6ECEB2;
@@ -18,7 +17,6 @@ font-weight: 700;
 font-size: 20px;
 line-height: 24px;
 `
-
 const Content = styled.div`
 display: flex;
 background-color:#FFFFFF ;
@@ -31,7 +29,6 @@ display: flex;
 flex-direction: column;
 gap: 28px;
 margin: 30px;
-
 `
 const Des = styled.div``
 
