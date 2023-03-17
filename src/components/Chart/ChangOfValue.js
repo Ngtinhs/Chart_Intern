@@ -27,6 +27,8 @@ border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 0px 0px 0px 4px;
 box-sizing: border-box;
 display: flex;
+color: #0A3B32;
+font-family: 'FWD Circular Viet TT';
 `
 const Left = styled.div`
 flex: 1;
@@ -47,10 +49,30 @@ padding: 15px 30px 15px 0;
 
 .filter {
   display: flex;
-  max-height: 44px;
-  border: 1px solid #DBDFE1;
+background: #ffffff;
+margin: 12px 0 12px 24px;
+max-height: 44px;
+box-sizing: border-box;
+border: 1px solid #dbdfe1;
 border-radius: 4px;
+justify-content: space-between;
 gap: 44.5px;
+cursor: pointer;
+}
+p {
+font-family: 'FWD Circular Viet TT';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #0A3B32;
+}
+
+img {
+margin-right: 20px;
+
 }
 
 h2{
@@ -75,14 +97,14 @@ const ChangOfValue = () => {
       </HeaderWrapper>
       <Main>
         <Left>
-          <h2>ABC</h2>
+          <h2>Từ lúc thành lập quỹ</h2>
           <BarChart />
         </Left>
         <Right>
           <div className='header'>
-            <h2>CBA</h2>
+            <h2>Thời gian</h2>
             <div className='filter'>
-              <p>
+              <p style={{ marginLeft: "20px", color: "#E87722" }}>
                 6 Tháng qua
               </p>
               <img src={arrow_down} alt="abc" />
