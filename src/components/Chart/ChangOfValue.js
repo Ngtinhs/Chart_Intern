@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
+import BarChart from './BarChart';
+import arrow_down from '../../assets/svg/arrow_down.svg';
+
 
 const Wrapper = styled.div`
 margin: 0 40px 40px 40px;
@@ -31,6 +34,11 @@ gap: 28px;
 margin: 30px;
 `
 const Des = styled.div``
+const TitleHeader = styled.div`
+display: flex;
+justify-content: space-between;
+;
+`
 
 
 const ChangOfValue = () => {
@@ -43,14 +51,18 @@ const ChangOfValue = () => {
         <Title style={{ borderRight: "0.6px solid #6ECEB2 " }}>
           <BoxChart >
             <h2>Từ lúc thành lập quỹ</h2>
-            <Des>Quỹ Tăng trưởng</Des>
-            <Des>Quỹ Cân bằng</Des>
-            <Des>Quỹ Bảo toàn</Des>
+            <BarChart />
           </BoxChart>
         </Title>
         <Title>
           <BoxChart>
-            <h2>Thời gian</h2>
+            <TitleHeader>
+              <h2>Thời gian</h2>
+              <span id="dropdown">
+                <p>6 Tháng qua</p>
+                <img src={arrow_down} alt="abc" />
+              </span>
+            </TitleHeader>
             <Des>Quỹ Tăng trưởng</Des>
             <Des>Quỹ Cân bằng</Des>
             <Des>Quỹ Bảo toàn</Des>

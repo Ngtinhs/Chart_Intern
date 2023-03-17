@@ -60,7 +60,6 @@ function App() {
           <ChangOfValue />
         </Wrapper>
       </Container >
-      {/* <BarChart /> */}
     </div>
   );
 }
